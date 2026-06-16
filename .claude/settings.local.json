@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rustc --version)",
+      "Bash(cargo --version)",
+      "Bash(npm --version)",
+      "Bash(lsusb)",
+      "Read(//home/otowm/.cargo/**)",
+      "Bash(command -v rustc)",
+      "Bash(pacman -Q rust rustup)",
+      "Read(//sys/bus/usb/devices/5-2.3:1.1/**)",
+      "Read(//sys/devices/pci0000:00/0000:00:08.1/0000:0c:00.4/usb5/5-2/5-2.3/5-2.3:1.1/**)",
+      "Bash(dmesg)",
+      "Bash(pacman -Q libusb)",
+      "Read(//usr/lib/**)",
+      "Bash(pacman -Q fuse2 fuse3)",
+      "Bash(lsmod)",
+      "Bash(gh --version)",
+      "Bash(gh auth *)",
+      "Bash(echo \"=== existe pasta antiga? ===\"; ls -d /c/Users/otowm/mini-keyboard-gui 2>/dev/null || echo \"nao existe\"; echo \"=== tamanho do target atual ===\"; du -sh src-tauri/target 2>/dev/null || echo \"sem target\")",
+      "Bash(cargo clean *)",
+      "Bash(du -sh target)",
+      "Bash(npm run *)",
+      "Bash(tee build.log)",
+      "Bash(git --version)",
+      "Bash(winget install *)",
+      "Bash(git config *)",
+      "Bash(git -C \"C:\\\\Users\\\\otowm\\\\Documents\\\\Apps\\\\mini-keyboard-gui\" status)",
+      "Read(//c/Program Files/GitHub CLI/**)",
+      "Bash(\"/c/Program Files/GitHub CLI/gh.exe\" --version)"
+    ]
+  }
+}

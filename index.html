@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/src/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Keyboard</title>
+    <script type="module" src="/src/main.ts" defer></script>
+  </head>
+
+  <body>
+    <header class="topbar">
+      <h1>Mini Keyboard</h1>
+      <div id="status" class="status status--unknown">
+        <span class="dot"></span>
+        <span id="status-text">verificando…</span>
+        <button id="refresh" title="Procurar teclado">⟳</button>
+      </div>
+    </header>
+
+    <main class="layout">
+      <!-- Painel visual do teclado (montado pelo main.ts conforme a orientação) -->
+      <section class="device">
+        <div class="pad-row" id="pad-row"></div>
+        <label class="orient">
+          <input type="checkbox" id="orient-toggle" />
+          Usar invertido (knob à esquerda, teclas 3·2·1, giro espelhado)
+        </label>
+      </section>
+
+      <!-- Editor do binding selecionado -->
+      <section class="editor" id="editor">
+        <h2 id="editor-title">Selecione uma tecla</h2>
+        <p class="hint" id="editor-hint">Clique numa tecla ou ação do knob ao lado para configurar.</p>
+
+        <div class="editor-body hidden" id="editor-body">
+          <label class="field">
+            <span>Tipo</span>
+            <select id="binding-type">
+              <option value="none">Nada</option>
+              <option value="keyboard">Tecla / atalho</option>
+              <option value="media">Mídia</option>
+              <option value="mouse">Mouse</option>
+            </select>
+          </label>
+
+          <!-- teclado -->
+          <div class="group" id="grp-keyboard">
+            <div class="mods" id="mods"></div>
+            <div class="field">
+              <span>Tecla</span>
+              <div class="key-pick">
+                <button type="button" id="capture-btn" class="capture">🎯 Capturar tecla</button>
+                <input id="key-input" list="key-list" placeholder="ou busque: a, f5, enter…" autocomplete="off" spellcheck="false" />
+                <datalist id="key-list"></datalist>
+              </div>
+            </div>
+            <div class="exclusive">
+              <span class="exclusive-label">Teclas exclusivas — não existem em teclado comum, não conflitam com nada:</span>
+              <div class="chips" id="exclusive-chips"></div>
+            </div>
+          </div>
+
+          <!-- mídia -->
+          <div class="group hidden" id="grp-media">
+            <label class="field">
+              <span>Mídia</span>
+              <select id="media-select"></select>
+            </label>
+          </div>
+
+          <!-- mouse -->
+          <div class="group hidden" id="grp-mouse">
+            <label class="field">
+              <span>Botão</span>
+              <select id="mouse-select">
+                <option value="left">Esquerdo</option>
+                <option value="right">Direito</option>
+                <option value="middle">Meio</option>
+              </select>
+            </label>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="actions">
+      <button id="preview" class="ghost">Pré-visualizar bytes</button>
+      <button id="upload" class="primary">Gravar no teclado</button>
+      <pre id="log" class="log hidden"></pre>
+    </footer>
+  </body>
+</html>
