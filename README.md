@@ -4,8 +4,7 @@ App **multiplataforma** (Windows + Linux) para configurar o macro pad **CH57x** 
 aquele teclado mecânico mini com **3 teclas + 1 knob/encoder** (chip WCH CH57x,
 VID `0x1189` / PID `0x8890`, também vendido como `8840`/`8842`).
 
-Substitui o utilitário chinês original (`MINI KeyBoard.exe`, só Windows e com
-interface ruim) por uma UI melhor que **também roda no Linux**. O mapeamento é
+Substitui o utilitário chinês original (`MINI KeyBoard.exe`, O mapeamento é
 gravado **na memória do próprio teclado** — depois de gravar, ele funciona em
 qualquer computador, sem precisar do app rodando.
 
