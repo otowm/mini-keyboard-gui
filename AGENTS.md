@@ -219,7 +219,9 @@ o `.deb`/`.rpm` (~4 MB) dependem das libs do sistema.
 - **Salvar/abrir perfis** (JSON local) e talvez exportar a config equivalente do
   ch57x-keyboard-tool (YAML).
 - **Empacotar:** Linux (`.deb`/`.rpm`/`.AppImage`) já gera OK — ver a pegadinha do
-  FUSE no §5. Falta gerar/validar o Windows (`.msi`).
+  FUSE no §5. Windows também já valida: `npm run tauri build` gera o `.exe`, o
+  instalador **`.msi`** (WiX) e o **`-setup.exe`** (NSIS) em
+  `src-tauri/target/release/bundle/{msi,nsis}/`.
 
 ---
 
